@@ -51,10 +51,12 @@ impl World {
                     self.agents[id2].score += 1;
                 }
                 (Action::StaysSilent, Action::Testifies) => {
-                    self.agents[id1].score += 3;
+                    // The testifying agent should receive the points
+                    self.agents[id2].score += 3;
                 }
                 (Action::Testifies, Action::StaysSilent) => {
-                    self.agents[id2].score += 3;
+                    // The testifying agent should receive the points
+                    self.agents[id1].score += 3;
                 }
                 (Action::Testifies, Action::Testifies) => {
                     self.agents[id1].score += 2;
