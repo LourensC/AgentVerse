@@ -1,6 +1,3 @@
-use contestants::AlwaysCooperate;
-use contestants::AlwaysDefect;
-use contestants::TitForTat;
 
 pub mod strategy;
 pub mod contestants;
